@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import faker from 'faker';
+import axios from 'axios';
 
 function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -8,49 +9,62 @@ function randomNum(min, max) {
 
 function getUserData() {
   return {
-    userName: faker.fake(
-      '{{name.prefix}} {{name.firstName}} {{name.lastName}}',
-    ),
-    userAge: randomNum(21, 103),
-    userAddress: faker.fake(
+    name: faker.fake('{{name.prefix}} {{name.firstName}} {{name.lastName}}'),
+    age: randomNum(21, 103),
+    address: faker.fake(
       '{{address.streetAddress}}, {{address.cityName}}, {{address.country}}',
     ),
-    userEmail: faker.internet.email(),
-    userAccNum: faker.finance.account(),
-    userCashier: `$${faker.finance.amount()}`,
-    userAvatar: faker.image.avatar(),
+    email: faker.internet.email(),
+    accNum: faker.finance.account(),
+    cashier: `$${faker.finance.amount()}`,
+    avatar: faker.image.avatar(),
   };
 }
 
-let user = getUserData();
-
 function UserCard() {
+  const [name, setName] = useState('');
+  const [avatar, setAvatar] = useState('https://via.placeholder.com/150');
+  const [age, setAge] = useState('');
+  const [address, setAddress] = useState('');
+  const [email, setEmail] = useState('');
+  const [accNum, setAccNum] = useState('');
+  const [cashier, setCashier] = useState('');
+
   function handleNewUser() {
     const newUser = getUserData();
-    setName(newUser.userName);
-    setAvatar(newUser.userAvatar);
-    setAge(newUser.userAge);
-    setAddress(newUser.userAddress);
-    setEmail(newUser.userEmail);
-    setAccNum(newUser.userAccNum);
-    setCashier(newUser.userCashier);
+    setName(newUser.name);
+    setAvatar(newUser.avatar);
+    setAge(newUser.age);
+    setAddress(newUser.address);
+    setEmail(newUser.email);
+    setAccNum(newUser.accNum);
+    setCashier(newUser.cashier);
+    console.log(newUser);
   }
 
-  const [name, setName] = useState(user.userName);
-  const [avatar, setAvatar] = useState(user.userAvatar);
-  const [age, setAge] = useState(user.userAge);
-  const [address, setAddress] = useState(user.userAddress);
-  const [email, setEmail] = useState(user.userEmail);
-  const [accNum, setAccNum] = useState(user.userAccNum);
-  const [cashier, setCashier] = useState(user.userCashier);
+  async function createUser() {
+    const curUser = {
+      name,
+      avatar,
+      age,
+      address,
+      email,
+      accNum,
+      cashier,
+    };
+    // TODO: validate obj function
+    if (name && age && address && email && accNum && cashier) {
+      const res = await axios.post('http://localhost:3004/users', {
+        ...curUser,
+      });
+      console.log(`🚀 ~ res`, res);
+    }
+    handleNewUser();
+  }
+
   return (
     <div className="container">
-      <img
-        src={avatar}
-        style={{ borderRadius: '50%' }}
-        alt="user-avatar"
-        onChange={setAvatar}
-      />
+      <img src={avatar} style={{ borderRadius: '50%' }} alt="user-avatar" />
       <div
         className="user-data"
         style={{ display: 'flex', flexDirection: 'column' }}
@@ -109,7 +123,7 @@ function UserCard() {
         />
       </div>
       <button onClick={() => handleNewUser()}>New</button>
-      <button>Save</button>
+      <button onClick={() => createUser()}>Save</button>
     </div>
   );
 }
