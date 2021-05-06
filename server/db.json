@@ -1,14 +1,64 @@
 {
   "users": [
     {
-      "name": "Mrs. Christa Rowe",
-      "avatar": "https://cdn.fakercloud.com/avatars/gregkilian_128.jpg",
-      "age": 22,
-      "address": "0074 Abernathy Street, Bloomington, Egypt",
-      "email": "Garnet_Cole44@gmail.com",
-      "accNum": "07022556",
-      "cashier": "$942.47",
+      "name": "Mrs. Anderson Hegmann",
+      "avatar": "https://cdn.fakercloud.com/avatars/s4f1_128.jpg",
+      "age": 42,
+      "address": "272 Austen Ways, Conway, Northern Mariana Islands",
+      "email": "Tevin45@gmail.com",
+      "accNum": "07883082",
+      "cashier": "$310.02",
       "id": 1
+    },
+    {
+      "name": "Mrs. Anderson Hegmann",
+      "avatar": "https://cdn.fakercloud.com/avatars/s4f1_128.jpg",
+      "age": 42,
+      "address": "272 Austen Ways, Conway, Northern Mariana Islands",
+      "email": "Tevin45@gmail.com",
+      "accNum": "07883082",
+      "cashier": "$310.02",
+      "id": 2
+    },
+    {
+      "name": "Mr. Aditya Heathcote",
+      "avatar": "https://cdn.fakercloud.com/avatars/nelsonjoyce_128.jpg",
+      "age": 64,
+      "address": "013 Rodriguez Glen, Albany, Afghanistan",
+      "email": "Michale_Leuschke@yahoo.com",
+      "accNum": "86510477",
+      "cashier": "$484.11",
+      "id": 3
+    },
+    {
+      "name": "Ms. Modesto Monahan",
+      "avatar": "https://cdn.fakercloud.com/avatars/michaelcolenso_128.jpg",
+      "age": 57,
+      "address": "136 Grimes Loop, Country Club, Bermuda",
+      "email": "Shaun66@gmail.com",
+      "accNum": "63841508",
+      "cashier": "$762.99",
+      "id": 4
+    },
+    {
+      "name": "Dr. Nyah Hilpert",
+      "avatar": "https://cdn.fakercloud.com/avatars/kvasnic_128.jpg",
+      "age": 66,
+      "address": "094 River Lights, Lakewood, Tuvalu",
+      "email": "Otis44@hotmail.com",
+      "accNum": "03028563",
+      "cashier": "$546.72",
+      "id": 5
+    },
+    {
+      "name": "Ms. Sherman Graham",
+      "avatar": "https://cdn.fakercloud.com/avatars/_williamguerra_128.jpg",
+      "age": 69,
+      "address": "76662 Schmidt Plaza, Hayward, Congo",
+      "email": "Maymie_Windler@hotmail.com",
+      "accNum": "36701941",
+      "cashier": "$426.42",
+      "id": 6
     }
   ]
 }
