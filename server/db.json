@@ -59,6 +59,16 @@
       "accNum": "36701941",
       "cashier": "$426.42",
       "id": 6
+    },
+    {
+      "name": "Mr. Diana O'Kon",
+      "avatar": "https://cdn.fakercloud.com/avatars/andreas_pr_128.jpg",
+      "age": 52,
+      "address": "5072 Stoltenberg Mission, Amarillo, Yemen",
+      "email": "Alva.Hilll@gmail.com",
+      "accNum": "24936808",
+      "cashier": "$975.41",
+      "id": 7
     }
   ]
 }

@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
   <div className="navbar">
-    <a href="/'">Create user</a>
-    <a href="/">Users list</a>
+    <Link to="/">Create User</Link>
+    <Link to="/cards">Cards</Link>
   </div>
 );
 
