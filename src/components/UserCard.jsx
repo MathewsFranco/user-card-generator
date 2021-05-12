@@ -6,7 +6,7 @@ import handleNewUser from '../functions/handleNewUser';
 export default function UserCard() {
   const [name, setName] = useState('');
   // eslint-disable-next-line no-unused-vars
-  const [avatar, setAvatar] = useState('https://via.placeholder.com/150');
+  const [avatar, setAvatar] = useState('https://via.placeholder.com/128');
   const [age, setAge] = useState('');
   const [address, setAddress] = useState('');
   const [email, setEmail] = useState('');
