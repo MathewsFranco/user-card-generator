@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import saveUser from '../functions/saveUser';
 
 import handleNewUser from '../functions/handleNewUser';
+import UserInput from './UserInput';
+import PrimaryButton from './PrimaryButton';
 
 export default function UserCard() {
   const [name, setName] = useState('');
@@ -20,60 +22,44 @@ export default function UserCard() {
         className="user-data"
         style={{ display: 'flex', flexDirection: 'column' }}
       >
-        <label htmlFor="full-name">Name:</label>
-        <input
-          type="text"
-          name="name"
-          id="full-name"
+        <UserInput
+          id="name"
+          label="Name:"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-
-        <label htmlFor="age">Age:</label>
-        <input
-          type="text"
-          name="age"
+        <UserInput
           id="age"
+          label="Age:"
           value={age}
           onChange={(e) => setAge(e.target.value)}
         />
-
-        <label htmlFor="address">Address:</label>
-        <input
-          type="text"
-          name="address"
+        <UserInput
           id="address"
+          label="Address:"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
         />
-        <label htmlFor="email">Email:</label>
-        <input
-          type="text"
-          name="email"
+        <UserInput
           id="email"
+          label="Email:"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-
-        <label htmlFor="acc-number">Acc number:</label>
-        <input
-          type="text"
-          name="acc-number"
+        <UserInput
           id="acc-number"
+          label="Acc number:"
           value={accNum}
           onChange={(e) => setAccNum(e.target.value)}
         />
-
-        <label htmlFor="cashier">Cashier:</label>
-        <input
-          type="text"
-          name="cashier"
+        <UserInput
           id="cashier"
+          label="Cashier:"
           value={cashier}
           onChange={(e) => setCashier(e.target.value)}
         />
       </div>
-      <button
+      <PrimaryButton
         onClick={() =>
           handleNewUser({
             setName,
@@ -86,8 +72,8 @@ export default function UserCard() {
           })
         }
       >
-        New
-      </button>
+        New User
+      </PrimaryButton>
       <button
         onClick={() => {
           saveUser({ name, avatar, age, address, email, accNum, cashier });
