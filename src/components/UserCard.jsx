@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import saveUser from '../functions/saveUser';
-
-import handleNewUser from '../functions/handleNewUser';
+import React from 'react';
 import UserInput from './UserInput';
-import PrimaryButton from './PrimaryButton';
 
-export default function UserCard() {
-  const [name, setName] = useState('');
-  // eslint-disable-next-line no-unused-vars
-  const [avatar, setAvatar] = useState('https://via.placeholder.com/128');
-  const [age, setAge] = useState('');
-  const [address, setAddress] = useState('');
-  const [email, setEmail] = useState('');
-  const [accNum, setAccNum] = useState('');
-  const [cashier, setCashier] = useState('');
-
+export default function UserCard({
+  avatar,
+  name,
+  setName,
+  age,
+  setAge,
+  address,
+  setAddress,
+  email,
+  setEmail,
+  accNum,
+  setAccNum,
+  cashier,
+  setCashier,
+}) {
   return (
     <div className="container">
       <img src={avatar} style={{ borderRadius: '50%' }} alt="user-avatar" />
@@ -59,37 +60,6 @@ export default function UserCard() {
           onChange={(e) => setCashier(e.target.value)}
         />
       </div>
-      <PrimaryButton
-        onClick={() =>
-          handleNewUser({
-            setName,
-            setAvatar,
-            setAge,
-            setAddress,
-            setEmail,
-            setAccNum,
-            setCashier,
-          })
-        }
-      >
-        New User
-      </PrimaryButton>
-      <button
-        onClick={() => {
-          saveUser({ name, avatar, age, address, email, accNum, cashier });
-          handleNewUser({
-            setName,
-            setAvatar,
-            setAge,
-            setAddress,
-            setEmail,
-            setAccNum,
-            setCashier,
-          });
-        }}
-      >
-        Save
-      </button>
     </div>
   );
 }
