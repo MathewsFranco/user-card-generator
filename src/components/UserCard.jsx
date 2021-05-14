@@ -15,6 +15,8 @@ export default function UserCard({
   setAccNum,
   cashier,
   setCashier,
+  disabled,
+  // setDisabled,
 }) {
   return (
     <div className="container">
@@ -28,36 +30,42 @@ export default function UserCard({
           label="Name:"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          disabled={disabled}
         />
         <UserInput
           id="age"
           label="Age:"
           value={age}
           onChange={(e) => setAge(e.target.value)}
+          disabled={disabled}
         />
         <UserInput
           id="address"
           label="Address:"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
+          disabled={disabled}
         />
         <UserInput
           id="email"
           label="Email:"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          disabled={disabled}
         />
         <UserInput
           id="acc-number"
           label="Acc number:"
           value={accNum}
           onChange={(e) => setAccNum(e.target.value)}
+          disabled={disabled}
         />
         <UserInput
           id="cashier"
           label="Cashier:"
           value={cashier}
           onChange={(e) => setCashier(e.target.value)}
+          disabled={disabled}
         />
       </div>
     </div>

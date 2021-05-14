@@ -1,3 +1,14 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Ms. Lucy Raynor",
+      "avatar": "https://cdn.fakercloud.com/avatars/smalonso_128.jpg",
+      "age": 54,
+      "address": "8131 Jakubowski Drive, Cleveland, Tajikistan",
+      "email": "Jaylon.Altenwerth@gmail.com",
+      "accNum": "28127747",
+      "cashier": "$319.54",
+      "id": 1
+    }
+  ]
 }

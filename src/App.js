@@ -16,6 +16,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [accNum, setAccNum] = useState('');
   const [cashier, setCashier] = useState('');
+  const [disabled, setDisabled] = useState(true);
 
   return (
     <>
@@ -38,6 +39,8 @@ function App() {
               setAccNum={setAccNum}
               cashier={cashier}
               setCashier={setCashier}
+              disabled={disabled}
+              setDisabled={setDisabled}
             />
             <PrimaryButton
               onClick={() =>
