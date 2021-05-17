@@ -9,6 +9,26 @@
       "accNum": "28127747",
       "cashier": "$319.54",
       "id": 1
+    },
+    {
+      "name": "Mrs. Giovani Will",
+      "avatar": "https://cdn.fakercloud.com/avatars/vaughanmoffitt_128.jpg",
+      "age": 28,
+      "address": "41104 Felton Divide, Covina, Saint Helena",
+      "email": "Nettie_Mosciski@yahoo.com",
+      "accNum": "02811858",
+      "cashier": "$925.08",
+      "id": 2
+    },
+    {
+      "name": "Mr. Mervin Hartmann",
+      "avatar": "https://cdn.fakercloud.com/avatars/cocolero_128.jpg",
+      "age": 38,
+      "address": "50284 Leanne Springs, Sioux City, Ecuador",
+      "email": "Neha20@gmail.com",
+      "accNum": "16221753",
+      "cashier": "$106.58",
+      "id": 3
     }
   ]
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import CardsDB from './components/CardsDB';
-import Header from './components/Header';
-import PrimaryButton from './components/PrimaryButton';
-import UserCard from './components/UserCard';
+import Header from './components/Organisms/Header';
+import PrimaryButton from './components/Atoms/PrimaryButton/PrimaryButton';
+import UserCard from './components/Organisms/UserCard';
 import handleNewUser from './functions/handleNewUser';
 import saveUser from './functions/saveUser';
 
@@ -16,7 +16,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [accNum, setAccNum] = useState('');
   const [cashier, setCashier] = useState('');
-  const [disabled, setDisabled] = useState(true);
+  const [disabled, setDisabled] = useState(false);
 
   return (
     <>

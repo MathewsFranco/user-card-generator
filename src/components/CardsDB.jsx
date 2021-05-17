@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import UserCard from './UserCard';
+import UserCard from './Organisms/UserCard';
 
 const CardsDB = () => {
   const [data, setData] = useState([]);
@@ -22,7 +22,7 @@ const CardsDB = () => {
     <>
       {data.map((user) => (
         <div
-          style={{ border: 'solid black 1px', margin: '10px' }}
+          style={{ border: 'solid black 1px', margin: '10px 0 10px 0' }}
           key={user.id}
         >
           <UserCard
